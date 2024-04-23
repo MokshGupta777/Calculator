@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CALCULATOR</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 align="center">CALCULATOR</h1>
+    <table border="2px blue" align="center" >
+      <!-- Input -->
+      <th colspan='4'><input type="button" id='display' value=""></th>
+      <!-- Buttons AC Back Percent Divide-->
+      <tr>
+        <td><button onclick='clearAll()' >C</button></td>
+        <td><button onclick='back()'>&larr;</button></td>
+        <td><button onclick='appendoperator("%")'>%</button></td>
+        <td><button onclick='appendoperator("/")'>&divide;</button></td>
+      </tr>
+      <!-- Numbers and Operators Rows 7 to 9 And * -->
+      <tr>
+        <td><button onclick="appendnumber('7')">7</button></td>
+        <td><button onclick="appendnumber('8')">8</button></td>
+        <td><button onclick="appendnumber('9')">9</button></td>
+        <td><button onclick='appendoperator("*")'>*</button></td>
+      </tr>
+      <!-- Numbers and Operators Rows 4 to 6 And - -->
+      <tr>
+        <td><button onclick="appendnumber('4')">4</button></td>
+        <td><button onclick="appendnumber('5')">5</button></td>
+        <td><button onclick="appendnumber('6')">6</button></td>
+        <td><button onclick='appendoperator("-")'>-</button></td>
+      </tr>
+      <!-- Numbers and Operators Rows 1 to 3 And + -->
+      <tr>
+        <td><button onclick="appendnumber('1')">1</button></td>
+        <td><button onclick="appendnumber('2')">2</button></td>
+        <td><button onclick="appendnumber('3')">3</button></td>
+        <td><button onclick='appendoperator("+")'>+</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="appendnumber('00')">00</button></td>
+        <td><button onclick="appendnumber('0')">0</button></td>
+        <td><button onclick='appendoperator(".")'>.</button></td>
+        <td><button onclick='equalsTo()'>=</button></td>
+      </tr>
+    </table>
+  </div>
+  <script src="calculator.js"></script>
+</body>
+</html>
